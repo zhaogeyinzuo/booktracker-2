@@ -1,0 +1,10 @@
+.navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.navigation_item{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}

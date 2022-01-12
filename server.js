@@ -8,18 +8,18 @@ const bodyParser = require("body-parser");
 
 const books = require("./server/routes/books");
 const readers = require("./server/routes/readers");
-const errores = require("./server/routes/error");
+const errores = require("./server/routes/errores");
 
 app.use(favicon(path.join(__dirname, "dist/booktracker-2/favicon.ico")));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "dist")));
+app.use(express.static(path.join(__dirname, "dist/booktracker-2")));
 
 app.use("/api/readers", readers);
 app.use("/api/books", books);
-app.use("/api/error", errores);
+app.use("/api/errores", errores);
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "dist/booktracker-2/index.html"));
 });

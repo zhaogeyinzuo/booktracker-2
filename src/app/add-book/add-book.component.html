@@ -1,0 +1,29 @@
+<div>
+    <form #addBook="ngForm" (ngSubmit)="saveBook(addBook.value)" class="form">
+        <fieldset>
+            <legend>Add Book</legend>
+            <div class="form-item">
+                <div><label for="title" class="form-item_label">Title: </label></div>
+                <div class="form-item_input">
+                    <input type="text" id="title" name="title" ngModel />
+                </div>
+            </div>
+            <div class="form-item">
+                <div><label for="author" class="form-item_label">Author: </label></div>
+                <div class="form-item_input">
+                    <input type="text" id="author" name="author" ngModel />
+                </div>
+            </div>
+            <div class="form-item">
+                <div><label for="year" class="form-item_label">PublicationYear: </label></div>
+                <div class="form-item_input">
+                    <input type="date" id="year" name="publicationYear" ngModel />
+                </div>
+            </div>
+            <div class="form-item_button">
+                <button type="submit">Save</button>
+                <button type="button" (click)="location.back()">Back</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

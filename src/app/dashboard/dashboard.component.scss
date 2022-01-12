@@ -1,0 +1,34 @@
+.dashboard{
+    position:relative;
+    box-sizing: border-box;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dashboard-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    border: black solid 2px;
+    margin-bottom: 1rem;
+}
+
+.dashboard-item_label{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    font-weight: bolder;
+    color: orange;
+    background-color: powderblue;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.dashboard-item_content{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
