@@ -1,0 +1,24 @@
+<div style="width: 45rem;">
+    <form class="form">
+        <fieldset class="form-container">
+            <legend class="form-container-label">Edit Book</legend>
+            <div class="form-container-control">
+                <label class="form-item_label" for="title">Title: </label>
+                <input class="form-item_input" type="text" id="title" name="title" [(ngModel)]="selectedBook && selectedBook.title" />
+            </div>
+            <div class="form-container-control">
+                <label class="form-item_label" for="author">Author: </label>
+                <input class="form-item_input" type="text" id="author" name="author" [(ngModel)]="selectedBook && selectedBook.author" />
+            </div>
+            <div class="form-container-control">
+                <label class="form-item_label" for="year">PublicationYear: </label>
+                <input class="form-item_input" type="date" id="year" name="publicationYear" [(ngModel)]="selectedBook && selectedBook.publicationYear" />
+            </div>
+            <div class="form-container-button">
+                <button type="button" (click)="saveChanges()">Save</button>
+                <button type="button" (click)="location.back()">Back</button>
+                <button type="button" (click)="setMostPupularBook(selectedBook?.title)">setMostPupularBook</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

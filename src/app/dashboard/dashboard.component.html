@@ -1,23 +1,36 @@
 <div class="dashboard">
     <div class="dashboard-item">
         <p class="dashboard-item_label">All Books</p>
-        <div>
+        <div style="width: 100%;overflow-y: auto;max-height: 200px;">
             <ol class="dashboard-item_content">
-                <li *ngFor="let book of allBooks">
-                    
+                <li *ngFor="let book of allBooks" style="width: 100%;">
+                    <span class="dashboard-item-content_item">
+                        <i class="item-label">{{book.title}}</i>
+                        <a class="item-link" [routerLink]="['/edit-book', book.bookID]">Edit</a>
+                        <a class="item-link" href="javascript:void(0)" (click)="deleteBook(book.bookID)">Delete</a>
+                    </span>
                 </li>
             </ol>
         </div>
     </div>
     <div class="dashboard-item">
         <p class="dashboard-item_label">All Readers</p>
-        <div class="dashboard-item_content">
-            <ol>
-                <li>AAA</li>
-                <li>BBB</li>
-                <li>CCC</li>
+        <div style="width: 100%;overflow-y: auto;max-height: 200px;">
+            <ol class="dashboard-item_content">
+                <li *ngFor="let reader of allReaders" style="width: 100%;">
+                    <span class="dashboard-item-content_item">
+                        <i class="item-label">{{reader.name}}</i>
+                        <a class="item-link" [routerLink]="['/edit-reader', reader.readerID]">Edit</a>
+                        <a class="item-link" href="javascript:void(0)" (click)="deleteReader(reader.readerID)">Delete</a>
+                    </span>
+                </li>
             </ol>
         </div>
     </div>
-    <div></div>
+    <div style="height: 100px;width: 100%;border: black 2px solid;">
+        <p class="dashboard-item_label">mostPopularBook</p>
+        <div style="padding: 1rem;display: flex;flex-direction: row;align-items: center;">
+            <i><mark style="font-weight: bolder;">{{mostPopularBookTitle}}</mark></i><span *ngIf="mostPopularBookTitle">&nbsp;is the mostPopularBook;</span>
+        </div>
+    </div>
 </div>

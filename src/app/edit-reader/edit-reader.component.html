@@ -1,0 +1,23 @@
+<div style="width: 45rem;">
+    <form class="form">
+        <fieldset class="form-container">
+            <legend class="form-container-label">Edit Reader</legend>
+            <div class="form-container-control">
+                <label class="form-item_label" for="name">Name: </label>
+                <input class="form-item_input" type="text" id="name" name="name" [(ngModel)]="selectedReader && selectedReader.name" />
+            </div>
+            <div class="form-container-control">
+                <label class="form-item_label" for="weeklyReadingGoal">WeeklyReadingGoal: </label>
+                <input class="form-item_input" type="number" id="weeklyReadingGoal" name="weeklyReadingGoal" [(ngModel)]="selectedReader && selectedReader.weeklyReadingGoal" />
+            </div>
+            <div class="form-container-control">
+                <label class="form-item_label" for="totalMinutesRead">TotalMinutesRead: </label>
+                <input class="form-item_input" type="number" id="totalMinutesRead" name="totalMinutesRead" [(ngModel)]="selectedReader && selectedReader.totalMinutesRead" />
+            </div>
+            <div class="form-container-button">
+                <button type="button" (click)="saveChanges()">Save</button>
+                <button type="button" (click)="location.back()">Back</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

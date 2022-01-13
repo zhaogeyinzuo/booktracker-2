@@ -1,0 +1,23 @@
+<div style="width:35rem;">
+    <form #addReader="ngForm" (ngSubmit)="saveReader(addReader.value)" style="width: inherit;">
+        <fieldset class="form">
+            <legend>Add Reader</legend>
+            <div class="form-item">
+                <div class="form-item_label"><label for="name">Name: </label></div>
+                <input class="form-item_input" type="text" id="name" name="name" ngModel />
+            </div>
+            <div class="form-item">
+                <div class="form-item_label"><label for="weeklyReadingGoal">WeeklyReadingGoal: </label></div>
+                <input class="form-item_input" type="number" id="weeklyReadingGoal" name="weeklyReadingGoal" ngModel />
+            </div>
+            <div class="form-item">
+                <div class="form-item_label"><label for="totalMinutesRead">TotalMinutesRead: </label></div>
+                <input class="form-item_input" type="number" id="totalMinutesRead" name="totalMinutesRead" ngModel />
+            </div>
+            <div class="form-item_button">
+                <button type="submit">Save</button>
+                <button type="button" (click)="location.back()">Back</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

@@ -1,5 +1,7 @@
 import { NgModule, Optional, SkipSelf } from "@angular/core";
 import { AddHeaderInterceptor } from "./add-header.interceptor";
+import { DataResolverService } from "./data.resolver.service";
+// import { DataResolverService } from "./data.resolver.service";
 import { DataService } from "./data.service";
 
 @NgModule({
@@ -7,7 +9,8 @@ import { DataService } from "./data.service";
     exports: [],
     providers: [
         DataService,
-        AddHeaderInterceptor
+        AddHeaderInterceptor,
+        DataResolverService
     ]
 })
 export class CoreModule{

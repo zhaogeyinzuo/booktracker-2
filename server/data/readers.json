@@ -1,0 +1,20 @@
+[
+    {
+        "readerID": 2,
+        "name": "Panel-00000",
+        "weeklyReadingGoal": 90,
+        "totalMinutesRead": 987
+    },
+    {
+        "readerID": 3,
+        "name": "Panel-111111",
+        "weeklyReadingGoal": 1111,
+        "totalMinutesRead": 2222222222
+    },
+    {
+        "readerID": 4,
+        "name": "Panel-22222",
+        "weeklyReadingGoal": 1098,
+        "totalMinutesRead": 44444444
+    }
+]

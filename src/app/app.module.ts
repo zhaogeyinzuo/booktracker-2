@@ -8,12 +8,18 @@ import { CoreModule } from './core/core.module';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
+import { AddReaderComponent } from './add-reader/add-reader.component';
+import { EditReaderComponent } from './edit-reader/edit-reader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    AddBookComponent
+    AddBookComponent,
+    EditBookComponent,
+    AddReaderComponent,
+    EditReaderComponent
   ],
   imports: [
     BrowserModule,
